@@ -1,11 +1,35 @@
-@(post : Post)
-<h1>@post.content</h1>
-<ul>
+@(post : Post) @main("Post detail"){
+
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="brand" href="@routes.Application.posts()">MyBlog</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="hero-unit">
+		<h1>@post.title</h1>
+	</div>
+
+	<p>@post.content</p>
+
+	<div class="well">
 	@for(comment <- post.comments) {
-		<li>@comment.content</li>
+		<blockquote>
+			<p>@comment.content</p>
+			<small>@comment.author</small>
+		</blockquote>
 	}
-</ul>
-@helper.form(action = routes.Application.createComment(post.id)) {
-	<input type="text" name="content" />
-	<input type="submit" valuee="Komentova" />
+
+	@helper.form(action = routes.Application.createComment(post.id)) {
+		
+		<input type="text" name="author" placeholder="Tvoje meno..."/></br>		
+		<textarea name="content" placeholder="Tvoj komentar..."></textarea>
+		</br>
+		<button class="btn btn-primary btn-large">
+			<i class="icon-comment icon-white"></i>Odoslat komentar
+		</button>
+	}
+	</div>
 }

@@ -5,6 +5,7 @@
 
 create table comment (
   id                        bigint not null,
+  author                    varchar(255),
   content                   varchar(255),
   post_id                   bigint,
   constraint pk_comment primary key (id))

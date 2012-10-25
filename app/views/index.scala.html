@@ -1,23 +1,37 @@
 @(posts : List[Post])
 
-<h1>My Blog</h1>
-<ul>
-@for(post <- posts) {
+@main("My Blog"){
 
-	<li>
-		<h2>
-			<a href="@routes.Application.show(post.id)" >@post.title</a>
-		</h2>
-		<p>@post.content</p>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Project name</a>
+        </div>
+      </div>
+    </div>
 	
-	</li>	
-}
-</ul>
+	<div class="hero-unit">
+		<h1>Moj Blog</h1>
+		<p>Moj super coolovy blog, ze sa pojebes!</p>
+	</div>
+	
+	<ul>
+	@for(post <- posts) {
 
-@helper.form(action = routes.Application.create()) {
-	<input type="text" name="title" /> </br>
-	<input type="text" name="content" /> </br>
-	<input type="submit" value="Post" />
+		<li>
+			<h2>
+				<a href="@routes.Application.show(post.id)" >@post.title</a>
+			</h2>
+			<p>@post.content</p>
+		
+		</li>	
+	}
+	</ul>
+	
+	<hr>
+	<footer>
+		<p>by Vlastimil Brecka - 2012 - FEI TUKE</p>
+	</footer>
 }
 
 

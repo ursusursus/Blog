@@ -14,15 +14,15 @@ public class Global extends GlobalSettings {
 			
 			Post post = new Post();
 			post.title="Post #1";
-			post.content="ASdnadsdmn asdnasd adnsmdnsma dasnmdsam.";
+			post.content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a pulvinar massa. Nullam gravida rhoncus quam non aliquam. Donec vitae orci at nibh scelerisque.";
 			post.save();
 			
 			Post post2 = new Post();
 			post2.title="Post #2";
-			post2.content="ASdnadsdmn asdnasd adnsmdnsma dasnmdsam.";
+			post2.content="Suspendisse leo ante, ornare et ultrices nec, commodo vitae neque. Proin dictum diam quis nibh elementum et consequat ipsum aliquam. Vestibulum ante ipsum.";
 			post2.save();
 			
-			Comment comment = new Comment();
+			/*Comment comment = new Comment();
 			comment.content="This is a comment #1";
 			comment.post = post;
 			comment.save();
@@ -35,7 +35,7 @@ public class Global extends GlobalSettings {
 			Comment comment3 = new Comment();
 			comment3.content="This is a comment #3";
 			comment3.post = post2;
-			comment3.save();
+			comment3.save();*/
 			
 		}
 	}
