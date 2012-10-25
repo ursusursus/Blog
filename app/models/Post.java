@@ -32,7 +32,7 @@ public class Post extends Model {
 		return finder.all(); 
 	}
 		
-	public static Post show(Long id) {
+	public static Post getById(Long id) {
 		return finder.byId(id);
 	}
 

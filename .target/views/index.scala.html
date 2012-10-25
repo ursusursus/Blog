@@ -10,18 +10,14 @@
 		</h2>
 		<p>@post.content</p>
 	
-		<ul>
-		@for(comment <- post.comments) {
-			<li>@comment.content</li>
-		}
-		</ul>
 	</li>	
 }
 </ul>
 
 @helper.form(action = routes.Application.create()) {
-	<input name="content" />
-	<input type="submit" />
+	<input type="text" name="title" /> </br>
+	<input type="text" name="content" /> </br>
+	<input type="submit" value="Post" />
 }
 
 

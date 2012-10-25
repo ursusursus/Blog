@@ -1,2 +1,11 @@
 @(post : Post)
 <h1>@post.content</h1>
+<ul>
+	@for(comment <- post.comments) {
+		<li>@comment.content</li>
+	}
+</ul>
+@helper.form(action = routes.Application.createComment(post.id)) {
+	<input type="text" name="content" />
+	<input type="submit" valuee="Komentova" />
+}
