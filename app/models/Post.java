@@ -3,6 +3,7 @@ package models;
 import java.util.List;
 
 import javax.persistence.CascadeType;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Lob;
@@ -25,6 +26,7 @@ public class Post extends Model {
 	
 	
 	@OneToMany
+	@Column(columnDefinition = "TEXT")
 	public List<Comment> comments;
 	
 	public static Finder<Long, Post> finder = new Finder<Long, Post>(Long.class, Post.class);	

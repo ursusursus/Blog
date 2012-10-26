@@ -14,7 +14,7 @@ public class Global extends GlobalSettings {
 			
 			Post post = new Post();
 			post.title="Post #1";
-			post.content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis a pulvinar massa. Nullam gravida rhoncus quam non aliquam. Donec vitae orci at nibh scelerisque.";
+			post.content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula tortor, rutrum sed placerat in, fringilla a arcu. Quisque tincidunt orci in lectus lobortis malesuada dictum nisl mattis. Sed metus nulla, adipiscing non ultricies vitae, congue a felis. In ligula urna, ornare at convallis et, mollis vitae urna. Morbi pharetra nisi id ligula tempor vitae condimentum nisi commodo. Vestibulum ut ipsum lorem, in mattis metus. Donec nec varius sapien. Quisque vitae ullamcorper sapien. Nulla in lorem quis dui commodo laoreet sit amet interdum turpis. Sed a justo ante. Nam at gravida augue. Curabitur quis ullamcorper leo.";
 			post.save();
 			
 			Post post2 = new Post();
